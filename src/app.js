@@ -3,7 +3,12 @@ function greet(name) {
     
     if( typeof name !== "string"){
         if(name.length === 2) return `Hello, ${name[0]} and ${name[1]}.`;
-        else return `Hello, Amy, Brian and Charlotte.`;
+        message = "Hello";
+        for(i = 0; i < name.length ; i += 1) {
+            if(i === name.length-1) message += ` and ${name[i]}.`
+            else message += `, ${name[i]}`;
+        }
+        return message;
     }
     if(isUpperCase(name)) return "HELLO, "+name+"!";
 
