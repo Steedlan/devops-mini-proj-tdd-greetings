@@ -12,7 +12,7 @@ function isEmptyString(name) {
     return name === "";
 }
 function isUpperCase(name){
-    return name === name.toUpperCase();
+    return name === name.toUpperCase();    
 }
 
 
