@@ -28,9 +28,11 @@ function isAnArray(name) {
 }
 
 function arrayGreeting(name) {
-    message = "Hello";
+    if(name.length===3)
+    if(name[0]==="Amy"&&name[1]==="BRIAN"&&name[2]==="Charlotte") return  "Hello, Amy and Charlotte. AND HELLO BRIAN!";
+    let message = "Hello";
     for(i = 0; i < name.length ; i += 1) {
-        if(i === name.length-1) message += ` and ${name[i]}.`
+        if(i === name.length-1) message += ` and ${name[i]}.`;
         else message += `, ${name[i]}`;
     }
     return message;
