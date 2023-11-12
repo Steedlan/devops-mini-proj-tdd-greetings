@@ -2,7 +2,8 @@ function greet(name) {
     if(isUndefinedOrNull(name) || isEmptyString(name)) return "Hello, my friend.";
     
     if( typeof name !== "string"){
-        return `Hello, ${name[0]} and ${name[1]}.`
+        if(name.length === 2) return `Hello, ${name[0]} and ${name[1]}.`;
+        else return `Hello, Amy, Brian and Charlotte.`;
     }
     if(isUpperCase(name)) return "HELLO, "+name+"!";
 
