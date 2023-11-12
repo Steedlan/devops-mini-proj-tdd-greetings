@@ -1,12 +1,18 @@
 {
   "name": "devops",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hello World mini project using TDD",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "nodemon ./src/app.js",
+    "test": "jest --watch",
+    "lint": "eslint ./src/**",
+    "lint:fix": "eslint --fix ./src/**",
+    "prettier": "prettier ./src/** --check",
+    "prettier:fix": "prettier ./src/** --write",
+    "list": "ls -la"
   },
-  "author": "",
+  "author": "Arnaud Schellekens, Sacha LeFranc, Axel LeFranc",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.51.0",
