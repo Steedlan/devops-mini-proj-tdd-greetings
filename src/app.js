@@ -28,15 +28,22 @@ function isAnArray(name) {
 }
 
 function arrayGreeting(name) {
-    if(name.length===3)
-    if(name[0]==="Amy"&&name[1]==="BRIAN"&&name[2]==="Charlotte") return  "Hello, Amy and Charlotte. AND HELLO BRIAN!";
+    let upperCase;
     let message = "Hello";
     for(i = 0; i < name.length ; i += 1) {
+        if(isUpperCase(name[i])) {
+            upperCase = name[i];
+            continue;
+        }
+
+
         if(i === name.length-1) message += ` and ${name[i]}.`;
         else message += `, ${name[i]}`;
     }
+    if(upperCase!==undefined) message+= ` AND HELLO ${upperCase}!`;
     return message;
 }
+
 
 
 module.exports = greet;
