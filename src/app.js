@@ -1,6 +1,5 @@
 function greet(name) {
-    if(isUndefinedOrNull(name)) return "Hello, my friend.";
-    if(isEmptyString(name)) return "Hello, my friend.";
+    if(isUndefinedOrNull(name) || isEmptyString(name)) return "Hello, my friend.";
     return "Hello, " + name + ".";
 }
 
