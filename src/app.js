@@ -1,6 +1,6 @@
 function greet(name) {
     if(isUndefinedOrNull(name) || isEmptyString(name)) return "Hello, my friend.";
-    if(name==="JERRY") return "HELLO, JERRY!";
+    if(name=== name.toUpperCase()) return "HELLO, "+name+"!";
     return "Hello, " + name + ".";
 }
 
