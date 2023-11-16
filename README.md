@@ -1,4 +1,4 @@
-# DevOps Mini Projet - Groupe 27
+# DevOps Mini Projet - Groupe 37
 [Click here to open the repository](https://github.com/Steedlan/devops-mini-proj-tdd-greetings)
 
 
