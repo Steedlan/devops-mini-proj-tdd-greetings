@@ -45,7 +45,8 @@ function isLanguageSupported(language) {
 }
 
 function findLanguage(name) {
-    if (isUndefinedOrNull(name)) return { language: languages['en'], index: -1 };
+    if (isUndefinedOrNull(name))
+        return { language: languages['en'], index: -1 };
 
     for (let i = 0; i < name.length; i++) {
         if (isLanguageSupported(name[i])) {
