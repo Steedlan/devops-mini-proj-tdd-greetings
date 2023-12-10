@@ -1,0 +1,51 @@
+name: GitHub Actions
+run-name: Testing continous integration with GitHub Actions
+on:
+  pull_request:
+    branches: main
+    types: [opened, edited]
+jobs:
+  Explore-GitHub-Actions:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Install nodejs
+            uses: actions/setup-node@v4
+            with:
+              node-version: '18'
+          
+          - name: Install project dependencies
+            run: |
+              echo "Installing project dependencies..."
+              npm i
+
+          - name: Display pipeline time
+            run: |
+              echo "The pipeline has started at $(date +"%H:%M:%S %Z")"
+          
+          - name: Check Prettier
+            run: |
+              echo "Running Prettier..."
+              npm run prettier
+          
+          - name: Check Lint
+            run: |
+              echo "Running ESLint..."
+              npm run lint
+          
+          - name: Check code coverage
+            run: |
+              echo "Checking code coverage with Jest"
+              npm run test:coverage
+
+          - name: Build code
+            run: |
+              echo "Building code"
+              npm run build
+          
+          - name: Display end pipeline
+            run: |
+              echo "Pipeline ended at $(date +"%H:%M:%S %Z")"
+
+          - name: Success without errors
+            run: |
+              echo "PIPELINE SUCCESS WITHOUT ERRORS"
