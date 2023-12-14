@@ -1,6 +1,7 @@
 # DevOps Mini-Projet 2
 Travail de recherche , mettre en place de l'integration continue avec les GitHub Actions
 
+
 ## Informations
 - N° de groupe : 37 <br>
 - lien du repo : https://github.com/Steedlan/devops-mini-proj-tdd-greetings <br>
