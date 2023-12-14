@@ -11,7 +11,8 @@
     "lint:fix": "eslint --fix ./src/**",
     "prettier": "prettier ./src/** --check",
     "prettier:fix": "prettier ./src/** --write",
-    "list": "ls -la"
+    "list": "ls -la",
+    "build": "webpack ./src/app.js -o dist/"
   },
   "author": "Arnaud Schellekens, Sacha LeFranc, Axel LeFranc",
   "license": "ISC",
@@ -25,12 +26,15 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
-        "./src/app.js"
+      "./src/app.js"
     ],
     "coverageThreshold": {
-        "global": {
-            "lines": 80
-        }
+      "global": {
+        "lines": 80
+      }
     }
+  },
+  "dependencies": {
+    "webpack": "^5.89.0"
   }
 }
