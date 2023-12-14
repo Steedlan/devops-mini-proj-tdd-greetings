@@ -12,7 +12,7 @@
     "prettier:fix": "prettier ./src/** --write",
     "list": "ls -la"
   },
-  "author": "Arnaud Schellekens, Sacha LeFranc, Axel LeFranc",
+  "author": "Axel Lefranc, Sacha Lefranc, Arnaud Schellekens",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.51.0",
