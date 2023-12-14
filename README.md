@@ -7,7 +7,7 @@ Travail de recherche , mettre en place de l'integration continue avec les GitHub
 - Membres du groupe : <br>
  Axel Lefranc <br>
  Sacha Lefranc <br>
- Arnaud Schellekens (aka Steedlan sur github) 
+ Arnaud Schellekens (aka Steedlan sur github)  
 
 
 ## Énoncé
