@@ -2,11 +2,12 @@
 Travail de recherche , mettre en place de l'integration continue avec les GitHub Actions
 
 ## Informations
-- N° de groupe : 37
-- Membres du groupe : 
- => Arnaud Schellekens (aka Steedlan sur github)
- => Sacha Lefranc
- => Axel Lefranc
+- N° de groupe : 37 <br>
+- lien du repo : https://github.com/Steedlan/devops-mini-proj-tdd-greetings <br>
+- Membres du groupe : <br>
+ Axel Lefranc <br>
+ Sacha Lefranc <br>
+ Arnaud Schellekens (aka Steedlan sur github)  
 
 
 ## Énoncé
@@ -46,25 +47,25 @@ Liens utiles:
 
 - Décrivez brièvement ce que fait votre fichier YML.  
 ```bash
-<votre réponse ici>
+Le fichier YML configure une suite d'étapes d'intégration continue avec github action. Il se déclenche automatiquement sur toutes les pull requests ouvertes et modifiées sur la main.
 ```
 - En particulier : à quoi sert le “on” ? dans votre fichier YML ?  Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ? 
 ```bash
-<votre réponse ici>
+Il permet de spécifier sur quel type de changement exécuter la pipeline. "On push" démare à chaque fois qu'il y a une modification. "On pull request" démare le script à chaque fois qu'on fait une pull request. Nous conseillerons plutôt la pull request car elle permet de vérifier le code avant de le push.
 ```
 - Quelle est la différence entre run et run_on ?  Expliquez par rapport à votre pipeline.  
 ```bash
-<votre réponse ici>
+"run_on" spécifie le système d'exploitation dans lequel sera exécuté l'intégration continue (dans notre cas ubuntu), alors que "run" décrit une suite d'actions à exécuter à chaque étapes
 ```
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline. 
 ```bash
-<votre réponse ici>
+"uses" utilise des outils préconfigurés par github action (comme installer node JS) et "run" exécute des commandes plus précises. (Comme lancer jest)
 ```
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline. 
 ```bash
-<votre réponse ici>
+Oui à condition que les dépendances soient installées avant exécution des scripts.
 ```
 - Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ?  Quelles questions devriez-vous vous poser ? 
 ```bash
-<votre réponse ici>
+Il suffit d'ajouter le script dans le package.json et de créer une étape dans le workflow qui lance le script avec npm. 
 ```
