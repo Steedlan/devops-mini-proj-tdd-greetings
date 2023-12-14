@@ -6,11 +6,13 @@
   "scripts": {
     "start": "nodemon ./src/app.js",
     "test": "jest --watch",
+    "test:coverage": "jest --coverage ",
     "lint": "eslint ./src/**",
     "lint:fix": "eslint --fix ./src/**",
     "prettier": "prettier ./src/** --check",
     "prettier:fix": "prettier ./src/** --write",
-    "list": "ls -la"
+    "list": "ls -la",
+    "build": "webpack ./src/app.js -o dist/"
   },
   "author": "Arnaud Schellekens, Sacha LeFranc, Axel LeFranc",
   "license": "ISC",
@@ -20,5 +22,19 @@
     "jest": "^29.7.0",
     "nodemon": "^3.0.1",
     "prettier": "3.0.3"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/app.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 80
+      }
+    }
+  },
+  "dependencies": {
+    "webpack": "^5.89.0"
   }
 }
